@@ -111,6 +111,7 @@ jobs:
           CYPRESS_BASE_URL: ${{ needs.deploy.outputs.vercel_url }}
         with:
           working-directory: cypress-tests
+          browser: chrome # 👈 AGREGA ESTA LÍNEA EXACTAMENTE AQUÍ
           install: false
           component: false
           record: false
