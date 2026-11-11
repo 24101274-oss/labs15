@@ -162,8 +162,8 @@ jobs:
       - name: Checkout Cypress repo
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
+          # This public repository can be read with the default GitHub Actions token.
           repository: 24101274-oss/cypress15
-          token: ${{ secrets.MI_GITHUB_TOKEN_REPOS || github.token }}
           path: cypress-tests
           persist-credentials: false
 
